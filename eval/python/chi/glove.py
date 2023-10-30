@@ -3,10 +3,10 @@ a quick and simple measure of creativity
 (Copyright 2021 Jay Olson; see LICENSE)"""
 
 import re
+import sys
 import itertools
 import numpy
 import scipy.spatial.distance
-
 
 class Model:
     """Create model to compute DAT"""
@@ -88,3 +88,20 @@ class Model:
 
         # Compute the DAT score (average semantic distance multiplied by 100)
         return (sum(distances) / len(distances)) * 100
+
+if __name__ == '__main__':
+    glove = Model()
+
+    while True:
+        try:
+            request = input('type a command to run. example: "distance(\"cat\", \"dog\")"')
+            request = request.strip()
+            if request.startswith('distance('):
+                glove.distance(args)
+                print()
+
+            else if request.startswith('dat('):
+                eval('glove.')
+
+        except Exception as err:
+            sys.stderr.write(err)
