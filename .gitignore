@@ -27,6 +27,9 @@
 *.i*86
 *.x86_64
 *.hex
+glove.*.zip
+glove.*.text
+vectors.txt
 
 # Debug files
 *.dSYM/
@@ -37,6 +40,7 @@ build/*
 
 # OS X stuff
 ._*
+.DS_Store
 
 # demo.sh-produced artifacts
 /cooccurrence.bin
